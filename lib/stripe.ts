@@ -5,9 +5,7 @@ export function getStripe() {
     throw new Error("STRIPE_SECRET_KEY is not configured.");
   }
 
-  return new Stripe(process.env.STRIPE_SECRET_KEY, {
-    typescript: true
-  });
+  return new Stripe(process.env.STRIPE_SECRET_KEY);
 }
 
 export function getAppUrl() {
