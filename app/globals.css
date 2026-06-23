@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    min-width: 320px;
+    background: #eff6ff;
+  }
+
+  body {
+    margin: 0;
+    background:
+      linear-gradient(180deg, #ffffff 0, #eff6ff 520px),
+      #eff6ff;
+    color: #18181b;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}

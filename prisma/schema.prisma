@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                    String     @id @default(cuid())
+  email                 String?
+  stripeCustomerId      String?    @unique
+  stripeCheckoutSession String?    @unique
+  hasProAccess          Boolean    @default(false)
+  analysisCount         Int        @default(0)
+  createdAt             DateTime   @default(now())
+  updatedAt             DateTime   @updatedAt
+  analyses              Analysis[]
+}
+
+model Analysis {
+  id                String   @id @default(cuid())
+  userId            String
+  resumeText        String
+  targetJob         String?
+  score             Int
+  riskLevel         String
+  vagueProblems     Json
+  interviewWarning  String
+  rewrittenResume   String
+  atsVersion        String
+  targetRoleVersion String
+  fullProblemAnalysis Json
+  positioningStrategy String
+  careerDirectionAdvice String
+  jobFits           Json
+  jobMatches        Json
+  fullResultVisible Boolean  @default(false)
+  createdAt         DateTime @default(now())
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
