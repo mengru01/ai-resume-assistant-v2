@@ -192,7 +192,7 @@ export default function Home() {
             Why your resume is not getting interviews
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-            Discover what's blocking your interviews - and fix it in one click.
+            Discover what&apos;s blocking your interviews - and fix it in one click.
           </p>
         </section>
 
@@ -251,7 +251,7 @@ export default function Home() {
           </article>
 
           <article className="rounded-2xl bg-white p-5 shadow-soft ring-1 ring-blue-100">
-            <p className="text-sm font-black text-[#2563EB]">Why you're being rejected</p>
+            <p className="text-sm font-black text-[#2563EB]">Why you&apos;re being rejected</p>
             <ul className="mt-4 grid gap-3">
               {problems.map((problem) => (
                 <li key={problem} className="rounded-xl border border-slate-200 p-4 text-sm font-black text-slate-700">
@@ -269,7 +269,7 @@ export default function Home() {
                 <p className="text-sm font-black uppercase tracking-normal text-orange-600">Locked</p>
                 <h2 className="mt-2 text-2xl font-black">Unlock full results</h2>
                 <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
-                  See exactly why you're not getting interviews and how to fix it.
+                  See exactly why you&apos;re not getting interviews and how to fix it.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2 text-xs font-black text-orange-700">
                   <span className="rounded-full bg-white px-3 py-2">Resume rewrite</span>
